@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import mypacakage.calculator;
 //question10
 class Animal {
     String name;
@@ -77,30 +78,40 @@ class question7 {
         }
         return n * factorial(n - 1);
     }
+
     static Scanner sc = new Scanner(System.in);
 
     public static void oddeve(int n) {
+        System.out.println("Enter your choice:1->odd or even;2-> Factorial:");
         int choice = sc.nextInt();
-        switch (choice) {
-            case 1:
-                if (n % 2 == 0) {
-                    System.out.println("Even");
-                } else {
-                    System.out.println("odd");
-                }
-                break;
-            case 2:
-                int result = factorial(n);
-                System.out.println(result);
-                break;
+            switch (choice) {
+                case 1:
+                    System.out.println("enter the value of N:");
+                    n = sc.nextInt();
+                    if (n % 2 == 0) {
+                        System.out.println("Even");
+                    } else {
+                        System.out.println("odd");
+                    }
+                    break;
+                case 2:
+                    System.out.println("enter the value of N:");
+                    n = sc.nextInt();
+                    int result = factorial(n);
+                    System.out.println(result);
+                    break;
+                default:
+                    System.out.println("You entered the wrong value");
+                    break;
+            }
         }
     }
-}
 
 class Assignment {
 
     public static void main(String[] args) {
-         System.out.println("Hello worlds"); 
+         System.out.println("Hello worlds");
+        Scanner sc=new Scanner(System.in);
         questioon6.isPrime(9);
         question7.factorial(5);
         question7.oddeve(5);
@@ -113,5 +124,14 @@ class Assignment {
         dog.eat();
         dog.sleep();
         dog.bark();
+        System.out.println("Enter the value use calculator:");
+        System.out.print("Enter the value of a:");
+        int a=sc.nextInt();
+        System.out.print("Enter the value of b:");
+        int b=sc.nextInt();
+        calculator.add(a,b);
+        calculator.sub(a,b);
+        calculator.divide(a,b);
+        calculator.modulous(a,b);
     }
 }
