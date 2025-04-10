@@ -120,10 +120,10 @@ class Assignment {
         //question 9//This is method overloading , use , int and (int,int)
         methodoverloading.method((float)2.3);
         //question10
-        Dog dog=new Dog("hello");
-        dog.eat();
-        dog.sleep();
-        dog.bark();
+//        Dog p=new Dog("hello");
+//        p.eat();
+//        p.sleep();
+//        p.bark();
         System.out.println("Enter the value use calculator:");
         System.out.print("Enter the value of a:");
         int a=sc.nextInt();
@@ -133,5 +133,6 @@ class Assignment {
         calculator.sub(a,b);
         calculator.divide(a,b);
         calculator.modulous(a,b);
+        Array.Array(5);
     }
 }
