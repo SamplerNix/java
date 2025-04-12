@@ -133,6 +133,5 @@ class Assignment {
         calculator.sub(a,b);
         calculator.divide(a,b);
         calculator.modulous(a,b);
-        Array.Array(5);
     }
 }
