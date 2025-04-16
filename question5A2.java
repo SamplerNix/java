@@ -61,12 +61,42 @@ class SelectionSort implements sortable {
         }
     }
 }
+//question 8 in Assignment 2
+interface Searchable{
+    boolean search(String keyword);
+}
+class Document implements Searchable{
+    private String text;
+    public Document(String key){
+        this.text=key;
+    }
+    @Override
+    public boolean search(String keyword){
+        if(keyword==null|| keyword.isEmpty()){
+            return false;
+        }
+        return text.contains(keyword);
+    }
+    public void display(){
+        System.out.println("Document Text:"+text);
+}
+}
 public class question5A2 {
-    public static void main(String[] args){
-        int [] arr={2,34,5,3,4,};
-        Bubblesort obj=new Bubblesort();
-        SelectionSort obj1=new SelectionSort();
+    public static void main(String[] args) {
+        int[] arr = {2, 34, 5, 3, 4,};
+        Bubblesort obj = new Bubblesort();
+        SelectionSort obj1 = new SelectionSort();
         obj1.sort(arr);
 //        obj.sort(arr);
+        Document doc = new Document("This is a sample Java text document for searching.");
+        doc.display();
+        String a="Java";
+        if(doc.search(a)){
+            System.out.println("Keyword "+ a +" found in the document");
+        }
+        else{
+            System.out.println("Keyword "+ a +"not found");
+        }
     }
 }
+
