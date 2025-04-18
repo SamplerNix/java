@@ -1,9 +1,9 @@
 import java.util.Scanner;
 import mypacakage.calculator;
 //question10
-class Animal {
+class parent {
     String name;
-    public Animal(String name) {
+    public parent(String name) {
         this.name = name;
     }
     public void eat() {
@@ -13,18 +13,16 @@ class Animal {
         System.out.println(name + " is sleeping.");
     }
 }
-// Child class that inherits from Animal
-class Dog extends Animal {
+// Child class that inherits from parent
+class child extends parent {
 
-    // Constructor for Dog
-    public Dog(String name) {
+    // Constructor for child
+    public child(String name) {
         // Calling the parent class (Animal) constructor
         super(name);
     }
-
-    // Additional method specific to Dog
-    public void bark() {
-        System.out.println(name + " is barking.");
+    public void talking() {
+        System.out.println(name + " is talking");
     }
 }
 
@@ -120,10 +118,10 @@ class Assignment {
         //question 9//This is method overloading , use , int and (int,int)
         methodoverloading.method((float)2.3);
         //question10
-//        Dog p=new Dog("hello");
-//        p.eat();
-//        p.sleep();
-//        p.bark();
+        child p=new child("hello");
+        p.eat();
+        p.sleep();
+        p.talking();
         System.out.println("Enter the value use calculator:");
         System.out.print("Enter the value of a:");
         int a=sc.nextInt();
